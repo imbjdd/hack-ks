@@ -61,12 +61,12 @@ function Star() {
 
 export default function Home() {
   const team = [
-    {name:'Salim Boujaddi', title: 'Head of Tech', image: 'salim.png'},
-    {name:'Salim Boujaddi', title: 'Head of Tech', image: 'salim.png'},
-    {name:'Salim Boujaddi', title: 'Head of Tech', image: 'salim.png'},
-    {name:'Salim Boujaddi', title: 'Head of Tech', image: 'salim.png'},
-    {name:'Salim Boujaddi', title: 'Head of Tech', image: 'salim.png'},
-    {name:'Salim Boujaddi', title: 'Head of Tech', image: 'salim.png'},
+    {name:'Salim Boujaddi', title: 'Volunteer', image: 'salim.png'},
+    {name:'Salim Boujaddi', title: 'Volunteer', image: 'salim.png'},
+    {name:'Salim Boujaddi', title: 'Volunteer', image: 'salim.png'},
+    {name:'Salim Boujaddi', title: 'Volunteer', image: 'salim.png'},
+    {name:'Salim Boujaddi', title: 'Volunteer', image: 'salim.png'},
+    {name:'Salim Boujaddi', title: 'Volunteer', image: 'salim.png'},
   ]
   return (
     <div className="flex flex-col items-center overflow-hidden">
