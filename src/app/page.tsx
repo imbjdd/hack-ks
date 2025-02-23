@@ -85,7 +85,7 @@ export default function Home() {
         <h1 className="text-4xl md:text-8xl font-bold relative w-fit">
           <div className="absolute top-0 right-0"><Star /></div>
           <div className="absolute bottom-0 right-40 hidden md:block"><Star /></div>
-          <span className="text-[#612DFC]">From LLM to AI</span><br />
+          <span className="text-[#612DFC]">From LLM to AGI</span><br />
           <span>Le premier Hackathon IA</span><br/>
           <span className="text-[#FF2727]">par KryptoSphère</span>
         </h1>
