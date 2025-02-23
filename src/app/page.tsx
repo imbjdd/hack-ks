@@ -81,7 +81,7 @@ export default function Home() {
           </div>
       </div>
 
-      <div className="container py-20 md:py-40 flex flex-col gap-8 px-4 md:px-0">
+      <div className="container pt-8 pb-20 md:pt-24 md:pb-40 flex flex-col gap-8 px-4 md:px-0">
         <h1 className="text-4xl md:text-8xl font-bold relative w-fit">
           <div className="absolute top-0 right-0"><Star /></div>
           <div className="absolute bottom-0 right-40 hidden md:block"><Star /></div>
