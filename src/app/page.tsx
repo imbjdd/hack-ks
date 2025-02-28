@@ -97,7 +97,7 @@ const Countdown = ({ targetDate }:{targetDate:any}) => {
 
   return (
     <div className="flex gap-4 md:gap-12">
-      {timerComponents.length ? timerComponents : <span>Le Hackathon a déjà eu lieu !</span>}
+      {timerComponents.length ? timerComponents : <span>Le Hackathon a malheureusement déjà eu lieu !</span>}
     </div>
   );
 };
