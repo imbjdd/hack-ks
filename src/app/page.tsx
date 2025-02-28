@@ -56,7 +56,7 @@ function Counter({ from, to }:{from:any, to:any}) {
 const Countdown = ({ targetDate }:{targetDate:any}) => {
   const calculateTimeLeft = () => {
     const difference = +new Date(targetDate) - +new Date();
-    let timeLeft = {};
+    let timeLeft: Record<string, number> = {};
 
     if (difference > 0) {
       timeLeft = {
@@ -82,8 +82,8 @@ const Countdown = ({ targetDate }:{targetDate:any}) => {
 
   const timerComponents:any = [];
 
-  Object.keys(timeLeft).forEach((interval) => {
-    if (!(timeLeft as any)[interval]) {
+  Object.keys(timeLeft).forEach((interval:string) => {
+    if (!timeLeft[interval]) {
       return;
     }
 
