@@ -53,6 +53,55 @@ function Counter({ from, to }:{from:any, to:any}) {
   return <span ref={nodeRef} />;
 }
 
+const Countdown = ({ targetDate }:{targetDate:any}) => {
+  const calculateTimeLeft = () => {
+    const difference = +new Date(targetDate) - +new Date();
+    let timeLeft = {};
+
+    if (difference > 0) {
+      timeLeft = {
+        Jours: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        Heures: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        Minutes: Math.floor((difference / 1000 / 60) % 60),
+        Secondes: Math.floor((difference / 1000) % 60),
+      };
+    }
+
+    return timeLeft;
+  };
+
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  });
+
+  const timerComponents:any = [];
+
+  Object.keys(timeLeft).forEach((interval) => {
+    if (!(timeLeft as any)[interval]) {
+      return;
+    }
+
+    timerComponents.push(
+      <div key={interval} className="flex flex-col gap-2">
+        <p className={"text-5xl md:text-8xl font-semibold "+(interval==='Secondes'?'bg-gradient-to-r from-[#612DFC] to-[#FF2727] bg-clip-text text-transparent':'')}>{timeLeft[interval]}</p>
+        <p className="font-semibold text-xl">{interval}{" "}</p>
+      </div>
+    );
+  });
+
+  return (
+    <div className="flex gap-4 md:gap-12">
+      {timerComponents.length ? timerComponents : <span>Le Hackathon a déjà eu lieu !</span>}
+    </div>
+  );
+};
+
 function Star() {
   return <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path fillRule="evenodd" clipRule="evenodd" d="M4.72793 0.48528L0.485291 4.72792L8.97057 13.2132L0.485277 21.6985L4.72792 25.9411L13.2132 17.4558L21.6985 25.9411L25.9411 21.6985L17.4558 13.2132L25.9411 4.72792L21.6985 0.485284L13.2132 8.97056L4.72793 0.48528ZM13.2132 8.97056L8.97057 13.2132L13.2132 17.4558L17.4558 13.2132L13.2132 8.97056Z" fill="black"/>
@@ -60,13 +109,15 @@ function Star() {
 }
 
 export default function Home() {
+  const targetDate = '2025-04-04T23:59:59';
+
   const team = [
-    {name:'Salim Boujaddi', title: 'Volunteer', image: 'salim.png'},
-    {name:'Salim Boujaddi', title: 'Volunteer', image: 'salim.png'},
-    {name:'Salim Boujaddi', title: 'Volunteer', image: 'salim.png'},
-    {name:'Salim Boujaddi', title: 'Volunteer', image: 'salim.png'},
-    {name:'Salim Boujaddi', title: 'Volunteer', image: 'salim.png'},
-    {name:'Salim Boujaddi', title: 'Volunteer', image: 'salim.png'},
+    {name:'Salim', title: 'Volunteer', image: 'salim.png'},
+    {name:'Salim', title: 'Volunteer', image: 'salim.png'},
+    {name:'Salim', title: 'Volunteer', image: 'salim.png'},
+    {name:'Salim', title: 'Volunteer', image: 'salim.png'},
+    {name:'Salim', title: 'Volunteer', image: 'salim.png'},
+    {name:'Salim', title: 'Volunteer', image: 'salim.png'},
   ]
   return (
     <div className="flex flex-col items-center overflow-hidden">
@@ -90,7 +141,17 @@ export default function Home() {
           <span className="text-[#FF2727]">par KryptoSphère</span>
         </h1>
         <p className="text-xl">Tentez votre chance en participant à notre hackathon de 48 heures.<br/>Obtenez de l&apos;aide de la part de mentors.</p>
-        <button className="py-4 px-20 bg-[#612DFC] w-fit text-white font-bold">Participer</button>
+        
+        <div className="flex flex-col gap-8 md:flex-row justify-between container items-center px-4 md:px-0">
+          <div>
+            <button className="py-4 px-20 bg-[#612DFC] w-fit text-white font-bold">Participer</button>
+          </div>
+          <div className="flex gap-4 md:gap-8">
+            <div className="flex gap-4 md:gap-12">
+              <Countdown targetDate={targetDate} />
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="bg-gradient-to-r from-[#612DFC] to-[#FF2727] min-h-[24rem] w-full flex flex-col items-center py-12 md:py-24 px-4 md:px-0">
