@@ -93,7 +93,7 @@ export default function Home() {
         <button className="py-4 px-20 bg-[#612DFC] w-fit text-white font-bold">Participer</button>
       </div>
 
-      <div className="bg-[#612DFC] min-h-80 w-full flex flex-col items-center py-12 px-4 md:px-0">
+      <div className="bg-gradient-to-r from-[#612DFC] to-[#FF2727] min-h-80 w-full flex flex-col items-center py-12 px-4 md:px-0">
         <div className="container">
           <p className="text-white font-bold text-xl">Nos sponsors</p>
         </div>
@@ -104,9 +104,9 @@ export default function Home() {
         <div className="absolute top-0 -right-20"><Star /></div></h2>
       </div>
 
-      <div className="bg-[#FF2727] text-white min-h-80 w-full flex flex-col items-center py-12 px-4 md:px-0">
+      <div className="bg-gradient-to-r from-[#612DFC] to-[#FF2727] text-white min-h-80 w-full flex flex-col items-center py-12 px-4 md:px-0">
       <div className="container flex flex-col gap-2 px-4 md:px-0">
-        <p className="font-bold text-xl">Notre équipe</p>
+        <p className="font-bold text-xl">Notre Panel</p>
         <p className="text-white/80">Composé d&apos;experts.</p>
         <div className="flex flex-col items-center md:flex-row pt-2 gap-8 px-8 md:px-0">
           {team.map((personne, index:number) => (
