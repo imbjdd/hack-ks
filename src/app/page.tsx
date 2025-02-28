@@ -138,7 +138,7 @@ export default function Home() {
           <div className="absolute bottom-0 right-40 hidden md:block"><Star /></div>
           <span className="text-[#612DFC]">From LLM to AGI</span><br />
           <span>Le premier Hackathon IA</span><br/>
-          <span className="text-[#FF2727]">par KryptoSphère</span>
+          <span className="text-[#FF2727]">pour les étudiants</span>
         </h1>
         <p className="text-xl">Tentez votre chance en participant à notre hackathon de 48 heures.<br/>Obtenez de l&apos;aide de la part de mentors.</p>
         
