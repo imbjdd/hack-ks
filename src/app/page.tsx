@@ -15,12 +15,12 @@ function Counter({ from, to }:{from:any, to:any}) {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setIsVisible(true);
-            observer.unobserve(node); // Arrête d'observer une fois que l'élément est visible
+            observer.unobserve(node);
           }
         });
       },
       {
-        threshold: 0.1, // Déclenche l'observation lorsque 10% de l'élément est visible
+        threshold: 0.1,
       }
     );
 
