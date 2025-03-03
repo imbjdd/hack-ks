@@ -126,15 +126,16 @@ export default function Home() {
     {name:'Salim', title: 'Volunteer', image: 'salim.png'},
   ]
   return (
-    <div className="flex flex-col items-center overflow-hidden">
+    <div className="flex scroll-smooth flex-col items-center overflow-hidden">
       <div className="flex justify-between container items-center px-4 md:px-0 py-12">
           <div>
             <p className="font-bold">Hackathon</p>
           </div>
           <div className="flex gap-4 md:gap-8">
-            <p>Sponsors</p>
-            <p>FAQ</p>
-            <p>Lieu</p>
+            <a href="#sponsors">Sponsors</a>
+            <a href="#lieu">Lieu</a>
+            <a href="#faq">FAQ</a>
+ 
           </div>
       </div>
 
@@ -150,7 +151,7 @@ export default function Home() {
         
         <div className="flex flex-col gap-8 md:flex-row justify-between container items-center px-4 md:px-0">
           <div>
-            <button className="py-4 px-20 bg-[#612DFC] w-fit text-white font-bold">Participer</button>
+            <button className="py-4 px-20 bg-[#612DFC] hover:bg-[#612DFC]/80 w-fit text-white font-bold">Participer</button>
           </div>
           <div className="flex gap-4 md:gap-8">
             <div className="flex gap-4 md:gap-12">
@@ -160,7 +161,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bg-gradient-to-r from-[#612DFC] to-[#FF2727] min-h-[24rem] w-full flex flex-col items-center py-12 md:py-24 px-4 md:px-0">
+      <div id="sponsors" className="bg-gradient-to-r from-[#612DFC] to-[#FF2727] min-h-[24rem] w-full flex flex-col items-center py-12 md:py-24 px-4 md:px-0">
         <div className="container">
           <p className="text-white font-bold text-xl">Nos sponsors</p>
         </div>
@@ -189,13 +190,13 @@ export default function Home() {
       </div>
       </div>
 
-      <div className="container py-4 md:py-20 px-4 md:px-0 flex flex-col gap-2">
+      <div id="lieu" className="container py-4 md:py-20 px-4 md:px-0 flex flex-col gap-2">
         <p className="font-bold text-xl">Le lieu</p>
         <p className="text-black/70 mb-2">Le hackathon se déroulera dans l&apos;enceinte de l&apos;école ESSEC.</p>
         <iframe className="w-full min-h-96" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5231.603174087223!2d2.075699076864314!3d49.03338058837544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6f53ae44bd367%3A0xa3f3ee2330ea2664!2sESSEC%20Business%20School%20-%20Campus%20de%20Cergy-Pontoise!5e0!3m2!1sfr!2sfr!4v1740253142193!5m2!1sfr!2sfr" loading="lazy"></iframe>
       </div>
 
-      <div className="container py-4 md:py-20 px-4 md:px-0 flex flex-col gap-4">
+      <div id="faq" className="container py-4 md:py-20 px-4 md:px-0 flex flex-col gap-4">
         <p className="font-bold text-xl">FAQ</p>
         <p className="text-black/70">Questions fréquemment posées</p>
         
