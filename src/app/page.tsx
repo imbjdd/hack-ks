@@ -2,6 +2,12 @@
 
 import { animate } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 
 function Counter({ from, to }:{from:any, to:any}) {
   const nodeRef = useRef<HTMLDivElement>(null);
@@ -185,8 +191,50 @@ export default function Home() {
 
       <div className="container py-4 md:py-20 px-4 md:px-0 flex flex-col gap-2">
         <p className="font-bold text-xl">Le lieu</p>
-        <p className="text-black/70">Le hackathon se déroulera dans l&apos;enceinte de l&apos;école ESSEC.</p>
+        <p className="text-black/70 mb-2">Le hackathon se déroulera dans l&apos;enceinte de l&apos;école ESSEC.</p>
         <iframe className="w-full min-h-96" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5231.603174087223!2d2.075699076864314!3d49.03338058837544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6f53ae44bd367%3A0xa3f3ee2330ea2664!2sESSEC%20Business%20School%20-%20Campus%20de%20Cergy-Pontoise!5e0!3m2!1sfr!2sfr!4v1740253142193!5m2!1sfr!2sfr" loading="lazy"></iframe>
+      </div>
+
+      <div className="container py-4 md:py-20 px-4 md:px-0 flex flex-col gap-4">
+        <p className="font-bold text-xl">FAQ</p>
+        <p className="text-black/70">Questions fréquemment posées</p>
+        
+        <Accordion type="single" collapsible className="w-full">
+          <AccordionItem value="item-1">
+            <AccordionTrigger>Qui peut participer au hackathon ?</AccordionTrigger>
+            <AccordionContent>
+              Le hackathon est ouvert à tous les étudiants, développeurs, designers et entrepreneurs passionnés par l'innovation.
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="item-2">
+            <AccordionTrigger>Dois-je venir avec une équipe ?</AccordionTrigger>
+            <AccordionContent>
+              Vous pouvez venir seul ou en équipe. Si vous venez seul, nous organiserons une session de formation d'équipe au début de l'événement.
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="item-3">
+            <AccordionTrigger>Que dois-je apporter ?</AccordionTrigger>
+            <AccordionContent>
+              Apportez votre ordinateur portable, chargeur et tout autre équipement dont vous pourriez avoir besoin. Des collations et boissons seront fournis.
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="item-4">
+            <AccordionTrigger>Y aura-t-il des mentors disponibles ?</AccordionTrigger>
+            <AccordionContent>
+              Oui, des mentors expérimentés seront présents tout au long de l'événement pour vous guider et vous conseiller.
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="item-5">
+            <AccordionTrigger>Comment les projets seront-ils évalués ?</AccordionTrigger>
+            <AccordionContent>
+              Les projets seront évalués par notre panel d'experts selon plusieurs critères : innovation, faisabilité technique, impact potentiel et qualité de la présentation.
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
       </div>
     </div>
   );
