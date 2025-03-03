@@ -234,6 +234,13 @@ export default function Home() {
               Les projets seront évalués par notre panel d&apos;experts selon plusieurs critères : innovation, faisabilité technique, impact potentiel et qualité de la présentation.
             </AccordionContent>
           </AccordionItem>
+
+          <AccordionItem value="item-6">
+            <AccordionTrigger>Par qui est organisé le hackathon ?</AccordionTrigger>
+            <AccordionContent>
+              Le hackathon est organisé par Kryptosphere, Unaite et Utopia.
+            </AccordionContent>
+          </AccordionItem>
         </Accordion>
       </div>
     </div>
