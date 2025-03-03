@@ -118,12 +118,7 @@ export default function Home() {
   const targetDate = '2025-04-04T23:59:59';
 
   const team = [
-    {name:'Salim', title: 'Volunteer', image: 'salim.png'},
-    {name:'Salim', title: 'Volunteer', image: 'salim.png'},
-    {name:'Salim', title: 'Volunteer', image: 'salim.png'},
-    {name:'Salim', title: 'Volunteer', image: 'salim.png'},
-    {name:'Salim', title: 'Volunteer', image: 'salim.png'},
-    {name:'Salim', title: 'Volunteer', image: 'salim.png'},
+    {name:'Vous', title: 'Bientôt annoncé', image: 'salim.png'},
   ]
   return (
     <div className="flex scroll-smooth flex-col items-center overflow-hidden">
