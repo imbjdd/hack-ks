@@ -203,14 +203,14 @@ export default function Home() {
           <AccordionItem value="item-1">
             <AccordionTrigger>Qui peut participer au hackathon ?</AccordionTrigger>
             <AccordionContent>
-              Le hackathon est ouvert à tous les étudiants, développeurs, designers et entrepreneurs passionnés par l'innovation.
+              Le hackathon est ouvert à tous les étudiants, développeurs, designers et entrepreneurs passionnés par l&apos;innovation.
             </AccordionContent>
           </AccordionItem>
 
           <AccordionItem value="item-2">
             <AccordionTrigger>Dois-je venir avec une équipe ?</AccordionTrigger>
             <AccordionContent>
-              Vous pouvez venir seul ou en équipe. Si vous venez seul, nous organiserons une session de formation d'équipe au début de l'événement.
+              Vous pouvez venir seul ou en équipe. Si vous venez seul, nous organiserons une session de formation d&apos;équipe au début de l&apos;événement.
             </AccordionContent>
           </AccordionItem>
 
@@ -224,14 +224,14 @@ export default function Home() {
           <AccordionItem value="item-4">
             <AccordionTrigger>Y aura-t-il des mentors disponibles ?</AccordionTrigger>
             <AccordionContent>
-              Oui, des mentors expérimentés seront présents tout au long de l'événement pour vous guider et vous conseiller.
+              Oui, des mentors expérimentés seront présents tout au long de l&apos;événement pour vous guider et vous conseiller.
             </AccordionContent>
           </AccordionItem>
 
           <AccordionItem value="item-5">
             <AccordionTrigger>Comment les projets seront-ils évalués ?</AccordionTrigger>
             <AccordionContent>
-              Les projets seront évalués par notre panel d'experts selon plusieurs critères : innovation, faisabilité technique, impact potentiel et qualité de la présentation.
+              Les projets seront évalués par notre panel d&apos;experts selon plusieurs critères : innovation, faisabilité technique, impact potentiel et qualité de la présentation.
             </AccordionContent>
           </AccordionItem>
         </Accordion>
