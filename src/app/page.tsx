@@ -126,6 +126,7 @@ export default function Home() {
     {name: 'Arthur Morvan', title: 'VP @KS ESSEC', image: 'arthur.jpeg'},
     {name: 'Mark-Killian Zinenberg', title: 'Head of DeFi @KS', image: 'mark.jpeg'},
     {name: 'Nicolas Neble', title: 'President @KS IMT Paris', image: 'nicolas.jpeg'},
+    {name: 'Clément Sporrer', title: 'ESSEC', image: 'clement.jpeg'},
   ]
   return (
     <div className="flex scroll-smooth flex-col items-center overflow-hidden">
