@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "From LLM to AGI",
-  description: "From LLM to AGI Hackathon",
+  title: "From LLM to Agentic AI",
+  description: "From LLM to Agentic AI Hackathon",
 };
 
 export default function RootLayout({

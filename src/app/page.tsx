@@ -118,39 +118,54 @@ export default function Home() {
   const targetDate = '2025-04-04T23:59:59';
 
   const team = [
-    {name:'Vous', title: 'Bientôt annoncé', image: 'salim.png'},
+    {name: 'Louis Piallat', title: 'General Secretary @KS\nHead of AI @KS', image: 'louis.jpeg'},
+    {name: 'Aymane OURAQ', title: 'President @KS IMT Paris', image: 'aymane.jpeg'},
+    {name: 'Yoan Di Cosmo', title: 'President @Unaite & Utopia', image: 'yoan.jpeg'},
+    {name: 'Othmane Menkor', title: 'Head of Hackathons @Utopia & KS', image: 'othmane.jpeg'},
+    {name: 'Stanislas Michel', title: 'Head of Financial Engineering @KS', image: 'stanislas.jpeg'},
+    {name: 'Arthur Morvan', title: 'VP @KS ESSEC', image: 'arthur.jpeg'},
+    {name: 'Mark-Killian Zinenberg', title: 'Head of DeFi @KS', image: 'mark.jpeg'},
+    {name: 'Nicolas Neble', title: 'President @KS IMT Paris', image: 'nicolas.jpeg'},
   ]
   return (
     <div className="flex scroll-smooth flex-col items-center overflow-hidden">
-      <div className="flex justify-between container items-center px-4 md:px-0 py-12">
-          <div>
-            <p className="font-bold">Hackathon</p>
+      <div className="bg-black w-full flex flex-col items-center relative">
+        <video autoPlay muted loop playsInline className="absolute w-full h-full object-cover opacity-20">
+          <source src="/essec.mp4" type="video/mp4" />
+        </video>
+        <div className="w-full h-full flex flex-col items-center relative">
+          <div className="flex container justify-between items-center px-4 md:px-0 py-12">
+              <div>
+                <p className="font-bold text-white">Hackathon</p>
+              </div>
+              <div className="flex gap-4 md:gap-8 text-white">
+                <a href="#sponsors" className="hover:text-gray-300">Sponsors</a>
+                <a href="#lieu" className="hover:text-gray-300">Lieu</a>
+                <a href="#faq" className="hover:text-gray-300">FAQ</a>
+              </div>
           </div>
-          <div className="flex gap-4 md:gap-8">
-            <a href="#sponsors">Sponsors</a>
-            <a href="#lieu">Lieu</a>
-            <a href="#faq">FAQ</a>
- 
-          </div>
-      </div>
 
-      <div className="container pt-8 pb-20 md:pt-24 md:pb-40 flex flex-col gap-8 px-4 md:px-0">
-        <h1 className="text-4xl md:text-8xl font-bold relative w-fit">
-          <div className="absolute top-0 right-0"><Star /></div>
-          <div className="absolute bottom-0 right-40 hidden md:block"><Star /></div>
-          <span className="text-[#612DFC]">From LLM to AGI</span><br />
-          <span>Le premier Hackathon IA</span><br/>
-          <span className="text-[#FF2727]">pour les étudiants</span>
-        </h1>
-        <p className="text-xl">Tentez votre chance en participant à notre hackathon de 48 heures.<br/>Obtenez de l&apos;aide de la part de mentors.</p>
-        
-        <div className="flex flex-col gap-8 md:flex-row justify-between container items-center px-4 md:px-0">
-          <div>
-            <button className="py-4 px-20 bg-[#612DFC] hover:bg-[#612DFC]/80 w-fit text-white font-bold">Participer</button>
-          </div>
-          <div className="flex gap-4 md:gap-8">
-            <div className="flex gap-4 md:gap-12">
-              <Countdown targetDate={targetDate} />
+          <div className="container pt-8 pb-20 md:pt-24 md:pb-40 flex flex-col gap-8 px-4 md:px-0 text-white">
+            <h1 className="text-4xl md:text-8xl font-bold relative w-fit">
+              <div className="absolute top-0 right-0"><Star /></div>
+              <div className="absolute bottom-0 right-40 hidden md:block"><Star /></div>
+              <span className="text-[#612DFC]">From LLM to Agentic AI</span><br />
+              <span className="text-white">Le premier Hackathon IA</span><br/>
+              <span className="text-[#FF2727]">pour les étudiants</span>
+            </h1>
+            <p className="text-xl text-gray-200">Tentez votre chance en participant à notre hackathon de 48 heures.<br/>Obtenez de l&apos;aide de la part de mentors.</p>
+            
+            <div className="flex flex-col gap-8 md:flex-row justify-between container items-center px-4 md:px-0">
+              <div>
+                <a href="https://lu.ma/shun5uky">
+                  <button className="py-4 px-20 bg-[#612DFC] hover:bg-[#612DFC]/80 w-fit text-white font-bold">Participer</button>
+                </a>
+              </div>
+              <div className="flex gap-4 md:gap-8">
+                <div className="flex gap-4 md:gap-12">
+                  <Countdown targetDate={targetDate} />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -159,23 +174,55 @@ export default function Home() {
       <div id="sponsors" className="bg-gradient-to-r from-[#612DFC] to-[#FF2727] min-h-[24rem] w-full flex flex-col items-center py-12 md:py-24 px-4 md:px-0">
         <div className="container">
           <p className="text-white font-bold text-xl">Nos sponsors</p>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mt-8">
+            <div className="bg-white/10 p-4 rounded-lg flex items-center justify-center">
+              <img src="/mistral.svg" alt="Mistral AI" className="h-12 object-contain" />
+            </div>
+            <div className="bg-white/10 p-4 rounded-lg flex items-center justify-center">
+              <img src="/aws.svg" alt="AWS" className="h-12 object-contain" />
+            </div>
+            <div className="bg-white/10 p-4 rounded-lg flex items-center justify-center">
+              <img src="/bpifrance.svg" alt="Bpifrance" className="h-12 object-contain" />
+            </div>
+            <div className="bg-white/10 p-4 rounded-lg flex items-center justify-center">
+              <img src="/kima.png" alt="Kima Ventures" className="h-12 object-contain" />
+            </div>
+            <div className="bg-white/10 p-4 rounded-lg flex items-center justify-center">
+              <img src="/ef.png" alt="Entrepreneur First" className="h-12 object-contain" />
+            </div>
+            <div className="bg-white/10 p-4 rounded-lg flex items-center justify-center">
+              <img src="/morpho.png" alt="Morpho" className="h-22 object-contain" />
+            </div>
+          </div>
         </div>
       </div>
 
       <div className="container my-24 md:my-60 flex items-center justify-center">
-        <h2 className="text-5xl md:text-9xl font-bold w-fit relative">+<Counter from={0} to={30000} />€ de Prix
+        <h2 className="text-5xl md:text-9xl font-bold w-fit relative">+<Counter from={0} to={50000} />€ de Prix
         <div className="absolute top-0 -right-20"><Star /></div></h2>
       </div>
 
       <div className="bg-gradient-to-r from-[#612DFC] to-[#FF2727] text-white min-h-80 w-full flex flex-col items-center py-12 md:py-24 px-4 md:px-0">
       <div className="container flex flex-col gap-2 px-4 md:px-0">
-        <p className="font-bold text-xl">Notre Panel</p>
+        <p className="font-bold text-xl">Notre Equipe</p>
         <p className="text-white/80">Composé d&apos;experts.</p>
-        <div className="flex flex-col items-center md:flex-row pt-2 gap-8 px-8 md:px-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 pt-2 gap-8 px-8 md:px-0">
           {team.map((personne, index:number) => (
-            <div className="flex flex-col" key={index}>
-              <div className="bg-black p-2 mb-2">
-                <img className="md:w-40 aspect-square object-cover rounded-sm" src={'/'+personne.image}/>
+            <div className="flex flex-col items-center text-center" key={index}>
+              <div className="bg-black p-2 mb-2 w-40 h-40">
+                <img 
+                  className="w-full h-full object-cover rounded-sm" 
+                  src={'/'+personne.image}
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.onerror = null;
+                    target.parentElement!.innerHTML = `
+                      <div class="w-full h-full bg-white/20 rounded-sm flex items-center justify-center">
+                        <span class="text-4xl font-bold text-white/40">${personne.name[0]}</span>
+                      </div>
+                    `;
+                  }}
+                />
               </div>
               <p className="font-bold">{personne.name}</p>
               <p className="text-white/80">{personne.title}</p>
